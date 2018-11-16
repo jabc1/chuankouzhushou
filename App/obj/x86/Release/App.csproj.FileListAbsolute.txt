@@ -1,0 +1,7 @@
+D:\c#\jizhanceshi\App\bin\Release\App.exe
+D:\c#\jizhanceshi\App\bin\Release\App.pdb
+D:\c#\jizhanceshi\App\obj\x86\Release\App.Form1.resources
+D:\c#\jizhanceshi\App\obj\x86\Release\App.Properties.Resources.resources
+D:\c#\jizhanceshi\App\obj\x86\Release\App.csproj.GenerateResource.Cache
+D:\c#\jizhanceshi\App\obj\x86\Release\App.exe
+D:\c#\jizhanceshi\App\obj\x86\Release\App.pdb
