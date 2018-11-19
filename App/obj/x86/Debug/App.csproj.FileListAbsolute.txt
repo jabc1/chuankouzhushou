@@ -12,4 +12,3 @@ D:\c#\jizhanceshi\App\bin\Debug\App.pdb
 D:\c#\jizhanceshi\App\obj\x86\Debug\App.Form1.resources
 D:\c#\jizhanceshi\App\obj\x86\Debug\App.Properties.Resources.resources
 D:\c#\jizhanceshi\App\obj\x86\Debug\App.csproj.GenerateResource.Cache
-D:\c#\jizhanceshi\App\obj\x86\Debug\App.csprojResolveAssemblyReference.cache
