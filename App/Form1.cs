@@ -30,6 +30,7 @@ namespace App
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
+            button9.Enabled = false;
             button11.Enabled = false;
             button12.Enabled = false;
             int[] item = { 9600, 115200 };    //定义一个Item数组，遍历item中每一个变量a，增加到comboBox2的列表中  
@@ -68,11 +69,14 @@ namespace App
                 button7.Enabled = false;
                 button11.Enabled = false;
                 button12.Enabled = false;
+                button9.Enabled = false;
                 this.textBox1.Text = "";
                 this.textBox2.Text = "";
                 this.textBox3.Text = "";
                 this.textBox4.Text = "";
                 this.textBox5.Text = "";
+                textBox6.Text = "";
+                textBox7.Text = "";
             }
             else
             {
@@ -99,11 +103,15 @@ namespace App
                 button7.Enabled = true;
                 button11.Enabled = true;
                 button12.Enabled = true;
+                button9.Enabled = true;
                 this.textBox1.Text = "A5 FF 03 14 01 44";//open beep
                 this.textBox2.Text = "A5 FF 03 14 00 45";//close beep
                 this.textBox4.Text = "A5 FF 02 10 4A";//reset
                 this.textBox3.Text = "A5 FF 03 18 01 40";//2.4Ghz close
                 this.textBox5.Text = "A5 FF 02 1F 3B";//恢复出厂
+                textBox6.Text = "test_name";
+                textBox7.Text = "test_passwd";
+                
                 button1.Text = comm.IsOpen ? "关闭串口" : "打开串口";
                 button1.Enabled = comm.IsOpen ? true : false;
 
@@ -167,15 +175,20 @@ namespace App
                 lineflag = true;
             }
             if(checkhex.Checked)
-            {
+            {//@"([^A-Fa-f0-9]|\s+?)+"
+#if true
                 MatchCollection mc = Regex.Matches(richTextBox2.Text, @"(?i)[\da-f]{2}");
+                //MatchCollection mc = Regex.Matches(richTextBox2.Text, @"([^A-Fa-f0-9]|\s+?)+");
                 List<byte> buf = new List<byte>();//填充到这个临时列表中 //依次添加到列表中 
                 foreach (Match m in mc)
                 {
                     buf.Add(byte.Parse(m.Value, System.Globalization.NumberStyles.HexNumber));
                 }
                 //转换列表为数组后发送
+#endif
+
                 comm.Write(buf.ToArray(), 0, buf.Count);
+
                 if(lineflag == true)
                 {
                     comm.WriteLine("\r\n");
@@ -297,6 +310,12 @@ namespace App
                 this.richTextBox1.SaveFile(objSave.FileName, RichTextBoxStreamType.PlainText);//重点在此句
             }
 
+        }
+        //textBox6  WIFI NAME
+        //textBox7  wifi passwd
+        private void button9_Click(object sender, EventArgs e)
+        {
+            comm.Write("~name:"+textBox6.Text+",~pass:"+ textBox7.Text);
         }
     }
 }

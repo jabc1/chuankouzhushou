@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +57,12 @@
             this.button7 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -134,9 +141,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 88);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 12);
+            this.label4.Size = new System.Drawing.Size(83, 12);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Receive data";
+            this.label4.Text = "Receive data:";
             // 
             // button2
             // 
@@ -171,9 +178,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 385);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 12);
+            this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 14;
-            this.label5.Text = "Send data";
+            this.label5.Text = "Send data:";
             // 
             // checkhex
             // 
@@ -309,11 +316,68 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(647, 410);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 12);
+            this.label6.TabIndex = 32;
+            this.label6.Text = " Setting Wifi name&passwd:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(808, 439);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(197, 21);
+            this.textBox6.TabIndex = 33;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(737, 442);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 12);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Wifi name:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(725, 473);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 12);
+            this.label8.TabIndex = 35;
+            this.label8.Text = "Wifi passwd:";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(808, 470);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(197, 21);
+            this.textBox7.TabIndex = 36;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(930, 497);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 37;
+            this.button9.Text = "Sure";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1049, 686);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button7);
@@ -343,6 +407,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "欢迎使用";
@@ -381,6 +446,12 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button button9;
     }
 }
 
